@@ -2,7 +2,7 @@
 configuration:
   pageTitle: Блог бизнес-аналитика
   pageTitleSuffix: ""
-  enableSPA: true
+  enableSPA: false
   enablePopovers: true
   analytics:
     provider: plausible
