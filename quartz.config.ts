@@ -1,12 +1,12 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: Блог бизнес-аналитика
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
-  locale: en-US
+  locale: ru-RU
   baseUrl: quartz.jzhao.xyz
   ignorePatterns:
     - private
@@ -72,7 +72,7 @@ plugins:
     order: 50
     layout:
       position: right
-      priority: 30
+      priority: 20
   - source: "@quartz-community/crawl-links"
     enabled: true
     options:
@@ -208,8 +208,6 @@ plugins:
     layout:
       position: footer
       priority: 50
-  - source: "@quartz-community/recent-notes"
-    enabled: false
   - source: "@quartz-community/spacer"
     enabled: true
     options: {}
@@ -257,6 +255,13 @@ plugins:
       position: afterBody
       priority: 50
       display: all
+  - source: "@quartz-community/recent-notes"
+    enabled: true
+    options:
+      limit: 3
+    layout:
+      position: left
+      priority: 60
 layout:
   groups:
     toolbar:
