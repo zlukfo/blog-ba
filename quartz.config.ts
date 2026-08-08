@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: ru-RU
-  baseUrl: https://zlukfo.github.io/blog-ba/
+  baseUrl: zlukfo.github.io/blog-ba
   ignorePatterns:
     - private
     - templates
