@@ -1,12 +1,12 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Блог бизнес-аналитика
+  pageTitle: "Блог аналитика"
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
-  locale: en-US
+  locale: ru-RU
   baseUrl: zlukfo.github.io/blog-ba
   ignorePatterns:
     - private
@@ -67,12 +67,6 @@ plugins:
   - source: "@quartz-community/github-flavored-markdown"
     enabled: true
     order: 40
-  - source: "@quartz-community/table-of-contents"
-    enabled: true
-    order: 50
-    layout:
-      position: right
-      priority: 30
   - source: "@quartz-community/crawl-links"
     enabled: true
     options:
@@ -135,6 +129,12 @@ plugins:
     layout:
       position: left
       priority: 50
+  - source: "@quartz-community/table-of-contents"
+    enabled: true
+    order: 50
+    layout:
+      position: right
+      priority: 5
   - source: "@quartz-community/graph"
     enabled: true
     layout:
