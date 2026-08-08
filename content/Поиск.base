@@ -1,0 +1,11 @@
+filters:
+  and:
+    - folder == true
+views:
+  - type: cards
+    name: Подготовлено для сайта
+  - type: cards
+    name: Разделы
+    filters:
+      and:
+        - folder == true

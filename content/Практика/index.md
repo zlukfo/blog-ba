@@ -1,5 +1,5 @@
 ---
-title: Теория
+title: Практика
 folder: true
 ---
 

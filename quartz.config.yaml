@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: ru-RU
-  baseUrl: zlukfo.github.io/blog-ba
+  baseUrl: https://zlukfo.github.io/blog-ba/
   ignorePatterns:
     - private
     - templates
@@ -131,6 +131,8 @@ plugins:
       priority: 50
   - source: "@quartz-community/recent-notes"
     enabled: true
+    limit: 3
+    showTags: false
     layout:
       position: left
       priority: 55
@@ -224,7 +226,6 @@ plugins:
       display: mobile-only
   - source: "@quartz-community/bases-page"
     enabled: true
-    options: {}
     order: 50
   - source: "@quartz-community/note-properties"
     enabled: true
@@ -273,7 +274,9 @@ layout:
         beforeBody: []
         left: []
         right: []
-    content: {}
+    content:
+      positions:
+        beforeBody: [bases-page]
     folder:
       exclude:
         - reader-mode

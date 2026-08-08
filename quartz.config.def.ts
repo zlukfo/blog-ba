@@ -218,8 +218,12 @@ plugins:
       display: mobile-only
   - source: "@quartz-community/bases-page"
     enabled: true
-    options: {}
+    options:
+      layout: gallery
     order: 50
+    layout:
+      position: beforeBody
+      priority: 30
   - source: "@quartz-community/note-properties"
     enabled: true
     options:
