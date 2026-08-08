@@ -129,6 +129,8 @@ plugins:
     layout:
       position: left
       priority: 50
+      display: desktop-only
+
   - source: "@quartz-community/recent-notes"
     enabled: true
     limit: 3
@@ -136,6 +138,8 @@ plugins:
     layout:
       position: left
       priority: 55
+      display: desktop-only
+
 
   - source: "@quartz-community/table-of-contents"
     enabled: true
@@ -143,11 +147,15 @@ plugins:
     layout:
       position: right
       priority: 5
+      display: desktop-only
+
   - source: "@quartz-community/graph"
     enabled: true
     layout:
       position: right
       priority: 10
+      display: desktop-only
+
   - source: "@quartz-community/search"
     enabled: true
     layout:
