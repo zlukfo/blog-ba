@@ -125,7 +125,7 @@ plugins:
   - source: "@quartz-community/tag-page"
     enabled: true
   - source: "@quartz-community/explorer"
-    enabled: true
+    enabled: false
     layout:
       position: left
       priority: 50
@@ -134,9 +134,13 @@ plugins:
   - source: "@quartz-community/recent-notes"
     enabled: true
     limit: 3
-    showTags: true
+    options:
+      title: "Последние публикации"
+      showTags: true
+      hideFolderPages: true
+
     layout:
-      position: afterBody
+      position: beforeBody
       priority: 40
       condition: index
       display: all
@@ -145,8 +149,8 @@ plugins:
     enabled: true
     order: 50
     layout:
-      position: right
-      priority: 5
+      position: left
+      priority: 50
       display: desktop-only
 
   - source: "@quartz-community/graph"
@@ -159,11 +163,12 @@ plugins:
   - source: "@quartz-community/search"
     enabled: true
     layout:
-      position: left
-      priority: 20
-      group: toolbar
+      position: beforeBody
+      priority: 1
+      group: topbar
       groupOptions:
         grow: true
+      display: all
   - source: "@quartz-community/backlinks"
     enabled: true
     layout:
@@ -192,15 +197,17 @@ plugins:
   - source: "@quartz-community/darkmode"
     enabled: true
     layout:
-      position: left
-      priority: 30
-      group: toolbar
+      position: beforeBody
+      priority: 2
+      group: topbar
+      display: all
   - source: "@quartz-community/reader-mode"
     enabled: true
     layout:
-      position: left
-      priority: 35
-      group: toolbar
+      position: beforeBody
+      priority: 3
+      group: topbar
+      display: all
   - source: "@quartz-community/breadcrumbs"
     enabled: true
     layout:
@@ -287,6 +294,7 @@ layout:
         beforeBody: [bases-page]
     folder:
       exclude:
+        - recent-notes
         - reader-mode
       positions:
         right: []
